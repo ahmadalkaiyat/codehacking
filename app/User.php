@@ -34,4 +34,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    public function isAdmin(){  // function to check that the user is an admin to  use in the middleware
+
+         if($this->role->id=="1"){
+
+             return true;
+         }
+         return false;
+    }
 }
