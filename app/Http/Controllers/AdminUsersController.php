@@ -36,7 +36,7 @@ class AdminUsersController extends Controller
 
         $roles = Role::pluck('name','id')->all();
 
-        return view('admin.users.create',compact('roles'));
+        return view('admin.users.create',compact('roles'));  // notice here we send the Roles to the Form the use it
     }
 
     /**

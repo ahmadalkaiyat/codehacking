@@ -32,6 +32,7 @@ Route::get('/admin',function (){
 Route::group(['middleware'=>'admin'],function (){   //we included the Admin controle into route group to make sure only admin can get into here
 
     Route::resource('admin/users','AdminUsersController');
+    Route::resource('admin/posts','AdminPostsController'); // after the Route make a controller php artisan make:controller --resource AdminPostsController
 
 });
 

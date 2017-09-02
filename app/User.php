@@ -38,10 +38,15 @@ class User extends Authenticatable
 
     public function isAdmin(){  // function to check that the user is an admin to  use in the middleware
 
-         if($this->role->id=="1"){
+         if($this->role->id=="1" && $this->is_active==1){
 
              return true;
          }
          return false;
+    }
+
+    public function posts(){
+
+        return $this->hasMany('App\post');
     }
 }

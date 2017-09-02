@@ -21,6 +21,7 @@
          <div class="form-group">
           {!! Form::label('role_id', 'Role:') !!}
           {!! Form::select('role_id', [''=>'Please Select a Role']+$roles,null, ['class'=>'form-control'])!!}
+             <!--  notice here we are usuing $role we got from AdminUserController Create method -->
          </div>
 
          <div class="form-group">
